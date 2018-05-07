@@ -4,8 +4,8 @@
   "description": "React HTML5 SCSS ES6 Boilerplate with Webpack and Babel",
   "main": "index.html",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --hot",
-    "build": "rm -rf build && NODE_ENV=production webpack",
+    "start": "NODE_ENV=development webpack-dev-server --config config/webpack.config.js --hot",
+    "build": "rm -rf build && NODE_ENV=production webpack --config config/webpack.config.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "author": "Samson Maconi",

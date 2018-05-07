@@ -7,35 +7,19 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin'),
     allChunks: true
   });
 const webpack = require('webpack');
-const paths = require('./config/paths');
+const paths = require('./paths');
 
 console.log("MODE: " + (debug ? "Development" : 'Production'));
 
 
 module.exports = {
   mode: debug ? 'development' : 'production',
-  context: __dirname,
+  context: __dirname + '/../',
   devtool: debug ? "inline-sourcemap" : false,
   entry:
-    //dev: [require.resolve('webpack-dev-server/client') + '?/',
-    //require.resolve('webpack/hot/dev-server')],
-    /*
-      Include an alternative client for WebpackDevServer. A client's job is to
-      connect to WebpackDevServer by a socket and get notified about changes.
-      When you save a file, the client will either apply hot updates (in case
-      of CSS changes), or refresh the page (in case of JS changes). When you
-      make a syntax error, this client will display a syntax error overlay.
-      Note: instead of the default WebpackDevServer client, we use a custom one
-      to bring better experience for Create React App users. You can replace
-      the line below with these two lines if you prefer the stock client:
-      require.resolve('webpack-dev-server/client') + '?/',
-      require.resolve('webpack/hot/dev-server'),
-      //require.resolve('react-dev-utils/webpackHotDevClient'),
-      Finally, this is my app's code:
-    */
     paths.appIndexJs,
   output: {
-    path: __dirname + "/build",
+    path: __dirname + "/../build",
     pathinfo: false,
     filename: "js/[name].bundle.js",
     // There are also additional JS chunk files if you use code splitting.
