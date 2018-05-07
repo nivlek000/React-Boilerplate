@@ -1,0 +1,16 @@
+@import './partials/reset';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/base';
+
+$bg-color: #ffffff;
+$color: #397071;
+
+body {
+    background: $bg-color;
+    color:$color;
+}
+
+#paragraph-1 {
+    color: rgb(0, 89, 255);
+}
