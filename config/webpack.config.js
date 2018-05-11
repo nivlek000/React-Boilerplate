@@ -113,6 +113,7 @@ module.exports = {
     watchContentBase: true,
     port: 9000,
     clientLogLevel: 'none',
+    historyApiFallback: true,
     open: true
   },
 
